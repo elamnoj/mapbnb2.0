@@ -1,3 +1,4 @@
+from .import routes
 import dash
 import dash_core_components as dcc
 import dash_html_components as html
@@ -130,10 +131,7 @@ def create_sf_application(flask_app):
 
 
 
-
-
-
-
+from .import routes
 
 if __name__ == '__main__':
     app.run_server(debug=True)
