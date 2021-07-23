@@ -1,0 +1,82 @@
+    <link rel="stylesheet" href="{{ url_for ('static', filename='./css/main.css') }}">
+
+{% extends 'layout.html'%}
+
+
+{% block content %}
+    <div class="container-fluid bg-1 text-center img-fluid" style="background-image: url('http://static1.squarespace.com/static/5c2a6a3f8ab7224aa18f545c/5c45157e39de24b3a92a6d4e/5c45157e39de24b3a92a6d67/1548031500344/pan61c.jpg?format=1500w'); padding-top:170px ; padding-bottom:170px;
+">
+        <h1 class="margin" style="color: white; font-size: 96px; font-weight: bolder;">CHICAGO</h1>
+    </div>
+
+
+    <div class="container" style="padding-top: 35px; margin-bottom: 35px;">
+        
+        <div class="row" id="chi-banner" style="margin-top: 35px;">
+            <div class="col-8 offset-2">
+                <h1>An Overview of Airbnb's in Chicago</h1>
+            </div>
+        </div>
+        <hr>
+        <div class="container-fluid" style="margin-top: 35px;">
+            <div class="row">
+                <div class="col-sm-7">
+                    <h2>Where to find the most listings...</h2>
+                    <h4>You'll find the most listings in the the Lakeview neighborhood with nearly 600 listings. Surronding neighborhoods like the Lincoln Park, 
+                         and Uptown also feature a high density of neighborhoods. </h4>
+                    <h4>But neighborhoods like Logan Square, West Town, and the Loop offer the next highest concentration of listings. Uptown or Logan Square may offer the best density to price offerings in the city. </h4>
+                </div>
+                <div class="col-sm-5">
+                    <img id="myImg" src="{{ url_for ('static', filename='/images/chihood.png') }}" class="img-fluid myImg" alt="Neighborhoods by Listing Density">
+                    <div id="myModal" class="modal">
+                    
+                        <!-- The Close Button -->
+                        <span class="close">&times;</span>
+                    
+                        <!-- Modal Content (The Image) -->
+                        <img class="modal-content" id="img01">
+                    
+                        <!-- Modal Caption (Image Text) -->
+                        <div id="caption"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container-fluid bg-grey" style="margin-top: 15px;">
+            <div class="row">
+                <div class="col-sm-5">
+                    <img id="" src="{{ url_for ('static', filename='/images/chiex.png') }}" class="myImg img-fluid" alt="Top 20 Most Expensive Neighborhoods on Average">
+                </div>
+                <div class="col-sm-7">
+                    <h2>Where you'll spend the most</h2>
+                    <h4>You'll spend the most in the the Near North and South Sides, with the former averaging nearly $350 per night and the latter just over $300. Next, Lincoln Park averages just under
+                        $250. Then, Lakeview, the Loop, West Town, North Center, and Logan Square all average around $200. </h4>
+                </div>
+            </div>
+        </div>
+        <div style="text-align: center; padding-top: 55px;">
+            <h1>Interact</h1>
+            <hr>
+            <h5>Color designates neighborhood. Size designates price.</h5>
+            <h5>Double-click on a neighborhood to isolate.</h5>
+        </div>
+        <hr>
+        
+        
+        <div id=”chart” style="margin-top: 35px;">
+            <iframe src="http://127.0.0.1:5000/chicago-map/" width=1100 height=400 frameBorder="0"></iframe>
+        </div>
+        
+        <!-- <button type="button" name="" id="" class="btn btn-dark" btn-lg btn-block>Add complete package to cart</button> -->
+        
+
+
+    </div>
+    
+    
+
+
+
+
+{% endblock content %}

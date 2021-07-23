@@ -1,0 +1,50 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-6 offset-3">
+        <h4>Manage Profile</h4>
+        <hr />
+        <form action="{{ url_for('profile') }}" method="POST" style="margin-bottom: 65px; font-size: 16px;">
+            <div class="form-group">
+                <input type="text" class="form-control" name="first_name" placeholder="First Name"
+                    value="{{ current_user.first_name }}" />
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" name="last_name" placeholder="Last Name"
+                    value="{{ current_user.last_name }}" />
+            </div>
+            <div class="form-group">
+                <input type="email" class="form-control" name="email" placeholder="Email" disabled
+                    value="{{ current_user.email }}" />
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" name="password" placeholder="Password" />
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" name="confirm_password" placeholder="Confirm Password" />
+            </div>
+            <input type="submit" class="btn btn-dark btn-block" value="Update Profile" />
+        </form>
+
+        <h4>Manage Subscription</h4>
+        <hr />
+        <button type="button" name="" id="" class="btn btn-dark btn-lg btn-block" style="margin-bottom: 55px;">Manage your subscription on the Customer Portal</button>
+        <!-- <div class="container mt-5"> -->
+            <!-- {% if subscription and subscription.status == "active" %}
+            <h4>Your subscription:</h4>
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">{{ product.name }}</h5>
+                    <p class="card-text">
+                        {{ product.description }}
+                    </p>
+                </div>
+            </div>
+            {% else %}
+            <button type="submit" class="btn btn-primary" id="submitBtn">Subscribe</button>
+            {% endif %} -->
+    </div>
+</div>
+{% endblock content %}
